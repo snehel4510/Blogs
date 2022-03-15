@@ -1,5 +1,3 @@
-## Manual to install CentOS on Virtual Box
-
 
 ### System Configuration :
 **Model NAME - MSI gf63<br>
@@ -14,15 +12,13 @@ Storage - 512GB SDD**
 ***Double click on the installer to launch the setup Wizard. Click on Next to continue and install the virtual box.***
 
 ### Enabling HYPER-V virtualization :
-1. Open up ```Task Manager->Performance Tab.
-``` You should see **Virtualization** as shown in the below screenshot. If it is enabled, it means that your CPU supports Virtualization and is currently enabled in **BIOS**. If it shows disabled, you need to enable it in **BIOS**. If you don’t see virtualization, it means that your CPU does not support virtualization.
+1. Open up ```
+Task Manager->Performance Tab.``` 
+You should see **Virtualization** as shown in the below screenshot. If it is enabled, it means that your CPU supports Virtualization and is currently enabled in **BIOS**. If it shows disabled, you need to enable it in **BIOS**. If you don’t see virtualization, it means that your CPU does not support virtualization.
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647336232520/K8nvg3YP0.png)
-2. To enter the **BIOS **of your system (MSI in my case), restart your system and then press the ```
-Delete
-``` key after the computer powers on but before it begins to boot.
+2. To enter the **BIOS **of your system (MSI in my case), restart your system and then press the ```Delete``` key after the computer powers on but before it begins to boot.
 Now you have entered ```
-BIOS setup Utility
-```, enable the virtualization technology using up or down arrow keys in the **System Configuration Tab**. After that **save and exit.**
+BIOS setup Utility```, enable the virtualization technology using up or down arrow keys in the **System Configuration Tab**. After that **save and exit.**
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647336261456/5-sxl9PTIW.png)
 
 ### Setting up Hyper-V:- 
@@ -36,9 +32,7 @@ So to Activate **Hyper-v** Feature on **Windows 10 Home**… Create a new file n
 pushd "%~dp0" dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt for /f %%i in ('findstr /i . hyper-v.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i" del hyper-v.txt Dism /online /enable-feature /featurename:Microsoft-Hyper-V -All /LimitAccess /ALL pause
 ```
 
-Now Right-click on that and select ```
-Run as Administrator
-```. It will open a **Command prompt** to run the code saved in it.
+Now Right-click on that and select ```Run as Administrator```. It will open a **Command prompt** to run the code saved in it.
 Wait for the process to complete. In the end, you will be asked to **restart** your computer. Please go ahead and restart your computer for the rest of the process to complete.
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647336282158/21kXrX774.png)
@@ -51,9 +45,7 @@ Wait for the process to complete. In the end, you will be asked to **restart** y
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647336309894/NVKeiap5L.png)
 3. Now, you have to set how much Memory **(RAM)** you want to allocate to the **VM**.
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647336321599/3IWzMXVGG.png)
-4. Now click on create virtual disk now radio button from the window and click on create. Now select the ```
-hard disk file type VDI
-``` from the window. Select **dynamically storage** from the radio button. And click on **next**. Select the size of the virtual hard disk from the scroll. And click on **create**. <br>
+4. Now click on create virtual disk now radio button from the window and click on create. Now select the ```hard disk file type VDI``` from the window. Select **dynamically storage** from the radio button. And click on **next**. Select the size of the virtual hard disk from the scroll. And click on **create**. <br>
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647336341771/FH1yKLjZl.png)
 5. Now we have to set the network server of the newly created virtual machine by clicking on the settings
 option. Click on the network option from the settings. Change the adapter 1 settings from NAT to nat network. From adapter 2 check the uncheck box and click on the host-only adapter and click on OK.
@@ -64,8 +56,7 @@ option. Click on the network option from the settings. Change the adapter 1 sett
 7. Now start the virtual machine by clicking on the start arrow. Now, click on **Installation Destination.** Then select the **virtual hard drive**, select **Automatic** from **Storage Configuration** section, click **Done **and then Click **Begin Installation**. In between the Installation of the machine select the ```
 root user
 ``` and ```
-user password
-```. Then **reboot **your system.
+user password```. Then **reboot **your system.
 **Your New Virtual Machine is now successfully created.**<br>
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647336397447/IbI9WMoaf.png)
 

@@ -14,8 +14,7 @@ Storage - 512GB SDD**
 ***Double click on the installer to launch the setup Wizard. Click on Next to continue and install the virtual box.***
 
 ### Enabling HYPER-V virtualization :
-1. Open up ```
-Task Manager->Performance Tab.
+1. Open up ```Task Manager->Performance Tab.
 ``` You should see **Virtualization** as shown in the below screenshot. If it is enabled, it means that your CPU supports Virtualization and is currently enabled in **BIOS**. If it shows disabled, you need to enable it in **BIOS**. If you don’t see virtualization, it means that your CPU does not support virtualization.
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647336232520/K8nvg3YP0.png)
 2. To enter the **BIOS **of your system (MSI in my case), restart your system and then press the ```
